@@ -15,6 +15,15 @@
 		8523E20B24440577008E53AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8523E20924440577008E53AD /* LaunchScreen.storyboard */; };
 		8523E21624440577008E53AD /* journey_explorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E21524440577008E53AD /* journey_explorerTests.swift */; };
 		8523E22124440577008E53AD /* journey_explorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E22024440577008E53AD /* journey_explorerUITests.swift */; };
+		8523E238244414ED008E53AD /* journey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8523E237244414ED008E53AD /* journey.storyboard */; };
+		8523E23A24441529008E53AD /* explorer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8523E23924441529008E53AD /* explorer.storyboard */; };
+		8523E23F24450432008E53AD /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E23E24450432008E53AD /* Journey.swift */; };
+		8523E24124450BC6008E53AD /* Explorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E24024450BC6008E53AD /* Explorer.swift */; };
+		8523E24324451222008E53AD /* JourneyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E24224451222008E53AD /* JourneyRepository.swift */; };
+		8523E24524451236008E53AD /* ExplorerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E24424451236008E53AD /* ExplorerRepository.swift */; };
+		8523E25524474996008E53AD /* journeyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E25424474996008E53AD /* journeyCollectionViewCell.swift */; };
+		8523E257244749B4008E53AD /* journeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E256244749B4008E53AD /* journeyTableViewCell.swift */; };
+		8523E25924474ACA008E53AD /* journeyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E25824474ACA008E53AD /* journeyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		8523E21C24440577008E53AD /* journey-explorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "journey-explorerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8523E22024440577008E53AD /* journey_explorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journey_explorerUITests.swift; sourceTree = "<group>"; };
 		8523E22224440577008E53AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8523E237244414ED008E53AD /* journey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = journey.storyboard; sourceTree = "<group>"; };
+		8523E23924441529008E53AD /* explorer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = explorer.storyboard; sourceTree = "<group>"; };
+		8523E23E24450432008E53AD /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		8523E24024450BC6008E53AD /* Explorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.swift; sourceTree = "<group>"; };
+		8523E24224451222008E53AD /* JourneyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyRepository.swift; sourceTree = "<group>"; };
+		8523E24424451236008E53AD /* ExplorerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerRepository.swift; sourceTree = "<group>"; };
+		8523E25424474996008E53AD /* journeyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyCollectionViewCell.swift; sourceTree = "<group>"; };
+		8523E256244749B4008E53AD /* journeyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyTableViewCell.swift; sourceTree = "<group>"; };
+		8523E25824474ACA008E53AD /* journeyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +117,10 @@
 		8523E1FD24440576008E53AD /* journey-explorer */ = {
 			isa = PBXGroup;
 			children = (
-				8523E1FE24440576008E53AD /* AppDelegate.swift */,
-				8523E20024440576008E53AD /* SceneDelegate.swift */,
-				8523E20224440576008E53AD /* ViewController.swift */,
-				8523E20424440576008E53AD /* Main.storyboard */,
-				8523E20724440577008E53AD /* Assets.xcassets */,
-				8523E20924440577008E53AD /* LaunchScreen.storyboard */,
+				8523E22F2444117C008E53AD /* domain */,
+				8523E23024441217008E53AD /* data */,
+				8523E2312444122B008E53AD /* application */,
+				8523E22E2444113F008E53AD /* presentation */,
 				8523E20C24440577008E53AD /* Info.plist */,
 			);
 			path = "journey-explorer";
@@ -126,6 +142,97 @@
 				8523E22224440577008E53AD /* Info.plist */,
 			);
 			path = "journey-explorerUITests";
+			sourceTree = "<group>";
+		};
+		8523E22E2444113F008E53AD /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8523E233244412B0008E53AD /* scenes */,
+				8523E23424441336008E53AD /* views */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		8523E22F2444117C008E53AD /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				8523E2322444127A008E53AD /* models */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		8523E23024441217008E53AD /* data */ = {
+			isa = PBXGroup;
+			children = (
+				8523E24224451222008E53AD /* JourneyRepository.swift */,
+				8523E24424451236008E53AD /* ExplorerRepository.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		8523E2312444122B008E53AD /* application */ = {
+			isa = PBXGroup;
+			children = (
+				8523E1FE24440576008E53AD /* AppDelegate.swift */,
+				8523E20024440576008E53AD /* SceneDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		8523E2322444127A008E53AD /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8523E23E24450432008E53AD /* Journey.swift */,
+				8523E24024450BC6008E53AD /* Explorer.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		8523E233244412B0008E53AD /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8523E20224440576008E53AD /* ViewController.swift */,
+				8523E20424440576008E53AD /* Main.storyboard */,
+				8523E20924440577008E53AD /* LaunchScreen.storyboard */,
+				8523E23524441468008E53AD /* module-journey */,
+				8523E23624441479008E53AD /* module-explorer */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		8523E23424441336008E53AD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8523E20724440577008E53AD /* Assets.xcassets */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		8523E23524441468008E53AD /* module-journey */ = {
+			isa = PBXGroup;
+			children = (
+				8523E237244414ED008E53AD /* journey.storyboard */,
+				8523E25824474ACA008E53AD /* journeyTableViewController.swift */,
+				8523E23B244483AC008E53AD /* cell */,
+			);
+			path = "module-journey";
+			sourceTree = "<group>";
+		};
+		8523E23624441479008E53AD /* module-explorer */ = {
+			isa = PBXGroup;
+			children = (
+				8523E23924441529008E53AD /* explorer.storyboard */,
+			);
+			path = "module-explorer";
+			sourceTree = "<group>";
+		};
+		8523E23B244483AC008E53AD /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8523E256244749B4008E53AD /* journeyTableViewCell.swift */,
+				8523E25424474996008E53AD /* journeyCollectionViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +340,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8523E20B24440577008E53AD /* LaunchScreen.storyboard in Resources */,
+				8523E238244414ED008E53AD /* journey.storyboard in Resources */,
+				8523E23A24441529008E53AD /* explorer.storyboard in Resources */,
 				8523E20824440577008E53AD /* Assets.xcassets in Resources */,
 				8523E20624440576008E53AD /* Main.storyboard in Resources */,
 			);
@@ -259,9 +368,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8523E24124450BC6008E53AD /* Explorer.swift in Sources */,
+				8523E257244749B4008E53AD /* journeyTableViewCell.swift in Sources */,
 				8523E20324440576008E53AD /* ViewController.swift in Sources */,
+				8523E24324451222008E53AD /* JourneyRepository.swift in Sources */,
+				8523E24524451236008E53AD /* ExplorerRepository.swift in Sources */,
 				8523E1FF24440576008E53AD /* AppDelegate.swift in Sources */,
+				8523E25924474ACA008E53AD /* journeyTableViewController.swift in Sources */,
 				8523E20124440576008E53AD /* SceneDelegate.swift in Sources */,
+				8523E25524474996008E53AD /* journeyCollectionViewCell.swift in Sources */,
+				8523E23F24450432008E53AD /* Journey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PrG-hT-J7W">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Journey-->
+        <scene sceneID="g5r-KR-XZH">
+            <objects>
+                <tableViewController id="MFa-7p-np6" customClass="journeyTableViewController" customModule="journey_explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pgB-ky-rRg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="journeyTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journeyTableViewCell" rowHeight="697" id="XQM-Ef-0hN" customClass="journeyTableViewCell" customModule="journey_explorer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="697"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XQM-Ef-0hN" id="j3U-1U-E2G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="697"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tVN-rp-DW9">
+                                            <rect key="frame" x="20" y="11" width="374" height="675"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bi8-0q-8yD">
+                                                <size key="itemSize" width="373" height="460"/>
+                                                <size key="estimatedItemSize" width="379" height="460"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="journeyCollectionViewCell" reuseIdentifier="journeyCollectionViewCell" id="qkb-7J-Hqj" customClass="journeyCollectionViewCell" customModule="journey_explorer" customModuleProvider="target">
+                                                    <rect key="frame" x="0.5" y="0.0" width="373" height="460"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hho-QE-ta2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="460"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="challenge1" translatesAutoresizingMaskIntoConstraints="NO" id="HAQ-Xt-8cV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="373" height="460"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="journeySubtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqu-iL-WYO">
+                                                                <rect key="frame" x="16" y="422" width="120" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <color key="textColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="journeyTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCU-U6-o63">
+                                                                <rect key="frame" x="16" y="380" width="187" height="41"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="HAQ-Xt-8cV" secondAttribute="bottom" id="EGW-Pp-fJr"/>
+                                                            <constraint firstItem="iqu-iL-WYO" firstAttribute="leading" secondItem="hho-QE-ta2" secondAttribute="leading" constant="16" id="Igp-xw-of7"/>
+                                                            <constraint firstAttribute="bottom" secondItem="iqu-iL-WYO" secondAttribute="bottom" constant="17" id="M3t-zF-iEw"/>
+                                                            <constraint firstAttribute="trailing" secondItem="HAQ-Xt-8cV" secondAttribute="trailing" id="Mt3-lo-rP3"/>
+                                                            <constraint firstItem="WCU-U6-o63" firstAttribute="leading" secondItem="hho-QE-ta2" secondAttribute="leading" constant="16" id="TNU-9D-J3D"/>
+                                                            <constraint firstItem="iqu-iL-WYO" firstAttribute="top" secondItem="WCU-U6-o63" secondAttribute="bottom" constant="1" id="bZl-69-btE"/>
+                                                            <constraint firstItem="HAQ-Xt-8cV" firstAttribute="leading" secondItem="hho-QE-ta2" secondAttribute="leading" id="dha-MR-wFS"/>
+                                                            <constraint firstItem="HAQ-Xt-8cV" firstAttribute="top" secondItem="hho-QE-ta2" secondAttribute="top" id="mXh-Y4-7R0"/>
+                                                        </constraints>
+                                                    </collectionViewCellContentView>
+                                                    <size key="customSize" width="373" height="460"/>
+                                                    <connections>
+                                                        <outlet property="journeyImageView" destination="HAQ-Xt-8cV" id="ob1-ws-L9E"/>
+                                                        <outlet property="journeySubtitleLabel" destination="iqu-iL-WYO" id="y6B-fW-yM0"/>
+                                                        <outlet property="journeyTitleLabel" destination="WCU-U6-o63" id="kwj-pe-VQs"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tVN-rp-DW9" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leadingMargin" id="2VF-kd-zkc"/>
+                                        <constraint firstItem="tVN-rp-DW9" firstAttribute="top" secondItem="j3U-1U-E2G" secondAttribute="topMargin" id="LTa-Yv-A3Y"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tVN-rp-DW9" secondAttribute="trailing" id="Pzr-j0-TgH"/>
+                                        <constraint firstItem="tVN-rp-DW9" firstAttribute="bottom" secondItem="j3U-1U-E2G" secondAttribute="bottomMargin" id="VPg-vP-GYN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <viewLayoutGuide key="safeArea" id="nhg-wt-5T1"/>
+                                <connections>
+                                    <outlet property="journeyCollectionView" destination="tVN-rp-DW9" id="JHE-qf-ohj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MFa-7p-np6" id="pfW-bf-GTA"/>
+                            <outlet property="delegate" destination="MFa-7p-np6" id="0CQ-Gm-NsG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Journey" id="Ggu-Fh-GcU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8g8-ri-ETl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="111.83035714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rXB-Dr-ocV">
+            <objects>
+                <viewController id="JGh-ej-XIp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NhG-Wd-OvM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YxY-DV-8gb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4d-WE-4Xs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="112"/>
+        </scene>
+        <!--Journey-->
+        <scene sceneID="5sf-Ff-owC">
+            <objects>
+                <navigationController id="PrG-hT-J7W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Journey" image="rectangle.grid.1x2" catalog="system" selectedImage="rectangle.grid.1x2.fill" id="8H8-yg-IIb"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9sG-PG-rTA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MFa-7p-np6" kind="relationship" relationship="rootViewController" id="4Oq-eF-IkN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaf-v3-NLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-948" y="112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="challenge1" width="300" height="219"/>
+        <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
+        <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
+    </resources>
+</document>
