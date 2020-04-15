@@ -89,7 +89,7 @@
                                 </tableViewCellContentView>
                                 <viewLayoutGuide key="safeArea" id="nhg-wt-5T1"/>
                                 <connections>
-                                    <outlet property="journeyCollectionView" destination="tVN-rp-DW9" id="JHE-qf-ohj"/>
+                                    <outlet property="journeyCollectionView" destination="tVN-rp-DW9" id="EkC-48-Uyv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
