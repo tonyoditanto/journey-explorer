@@ -10,7 +10,39 @@ import UIKit
 
 class journeyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var journeyCollectionView: UICollectionView!
+    @IBOutlet weak var journeyImageView: UIImageView!
+    @IBOutlet weak var journeyTitleLabel: UILabel!
+    @IBOutlet weak var journeySubtitleLabel: UILabel!
     
+    var journeyCell: Journey!{
+        didSet{
+            configureCell()
+        }
+    }
+    
+    func configureCell() {
+        configureImage()
+        configureLabel()
+    }
+    
+    func configureImage(){
+        journeyImageView.image = UIImage(named: journeyCell.journeyImageName)
+        journeyImageView.layer.cornerRadius = 10.0
+        journeyImageView.layer.masksToBounds = true
+        
+
+    }
+    
+    func configureLabel(){
+        journeyTitleLabel.text = journeyCell.journeyTitle
+        
+        switch journeyCell.journeyTeam {
+        case true:
+            journeySubtitleLabel.text = "Group Challenge - \(journeyCell.journeyDuration) Weeks"
+        default:
+            journeySubtitleLabel.text = "Individual Challenge - \(journeyCell.journeyDuration) Weeks"
+        }
+
+    }
 
 }
