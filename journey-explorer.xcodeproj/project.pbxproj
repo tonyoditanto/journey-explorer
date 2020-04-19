@@ -24,6 +24,24 @@
 		8523E25524474996008E53AD /* journeyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E25424474996008E53AD /* journeyCollectionViewCell.swift */; };
 		8523E257244749B4008E53AD /* journeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E256244749B4008E53AD /* journeyTableViewCell.swift */; };
 		8523E25924474ACA008E53AD /* journeyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523E25824474ACA008E53AD /* journeyTableViewController.swift */; };
+		8523E25E2447876A008E53AD /* journeyDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8523E25D2447876A008E53AD /* journeyDetail.storyboard */; };
+		855E22A7244D15A100D79146 /* explorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855E22A6244D15A100D79146 /* explorerViewController.swift */; };
+		8578EF892447CDE100D9BE50 /* thumbnailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF872447CDE100D9BE50 /* thumbnailTableViewCell.swift */; };
+		8578EF8A2447CDE100D9BE50 /* thumbnailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EF882447CDE100D9BE50 /* thumbnailTableViewCell.xib */; };
+		8578EF8D2447CE0100D9BE50 /* descriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF8B2447CE0100D9BE50 /* descriptionTableViewCell.swift */; };
+		8578EF8E2447CE0100D9BE50 /* descriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EF8C2447CE0100D9BE50 /* descriptionTableViewCell.xib */; };
+		8578EF912447CE2200D9BE50 /* learningGoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF8F2447CE2200D9BE50 /* learningGoalsTableViewCell.swift */; };
+		8578EF922447CE2200D9BE50 /* learningGoalsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EF902447CE2200D9BE50 /* learningGoalsTableViewCell.xib */; };
+		8578EF952447CE3D00D9BE50 /* constraintsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF932447CE3D00D9BE50 /* constraintsTableViewCell.swift */; };
+		8578EF962447CE3D00D9BE50 /* constraintsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EF942447CE3D00D9BE50 /* constraintsTableViewCell.xib */; };
+		8578EF992447CE5400D9BE50 /* deliverablesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF972447CE5400D9BE50 /* deliverablesTableViewCell.swift */; };
+		8578EF9A2447CE5400D9BE50 /* deliverablesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EF982447CE5400D9BE50 /* deliverablesTableViewCell.xib */; };
+		8578EF9E24480F2D00D9BE50 /* journeyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF9D24480F2C00D9BE50 /* journeyDetailViewController.swift */; };
+		8578EFA024487FCC00D9BE50 /* JourneyDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF9F24487FCC00D9BE50 /* JourneyDetailSection.swift */; };
+		8578EFA224491D1700D9BE50 /* explorerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EFA124491D1700D9BE50 /* explorerCollectionViewController.swift */; };
+		8578EFA824491DAA00D9BE50 /* explorerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EFA624491DAA00D9BE50 /* explorerCollectionViewCell.swift */; };
+		8578EFA924491DAA00D9BE50 /* explorerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EFA724491DAA00D9BE50 /* explorerCollectionViewCell.xib */; };
+		8578EFAB244CC95E00D9BE50 /* journeyDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EFAA244CC95E00D9BE50 /* journeyDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +85,24 @@
 		8523E25424474996008E53AD /* journeyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyCollectionViewCell.swift; sourceTree = "<group>"; };
 		8523E256244749B4008E53AD /* journeyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyTableViewCell.swift; sourceTree = "<group>"; };
 		8523E25824474ACA008E53AD /* journeyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyTableViewController.swift; sourceTree = "<group>"; };
+		8523E25D2447876A008E53AD /* journeyDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = journeyDetail.storyboard; sourceTree = "<group>"; };
+		855E22A6244D15A100D79146 /* explorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = explorerViewController.swift; sourceTree = "<group>"; };
+		8578EF872447CDE100D9BE50 /* thumbnailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thumbnailTableViewCell.swift; sourceTree = "<group>"; };
+		8578EF882447CDE100D9BE50 /* thumbnailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = thumbnailTableViewCell.xib; sourceTree = "<group>"; };
+		8578EF8B2447CE0100D9BE50 /* descriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = descriptionTableViewCell.swift; sourceTree = "<group>"; };
+		8578EF8C2447CE0100D9BE50 /* descriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = descriptionTableViewCell.xib; sourceTree = "<group>"; };
+		8578EF8F2447CE2200D9BE50 /* learningGoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learningGoalsTableViewCell.swift; sourceTree = "<group>"; };
+		8578EF902447CE2200D9BE50 /* learningGoalsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = learningGoalsTableViewCell.xib; sourceTree = "<group>"; };
+		8578EF932447CE3D00D9BE50 /* constraintsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constraintsTableViewCell.swift; sourceTree = "<group>"; };
+		8578EF942447CE3D00D9BE50 /* constraintsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = constraintsTableViewCell.xib; sourceTree = "<group>"; };
+		8578EF972447CE5400D9BE50 /* deliverablesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliverablesTableViewCell.swift; sourceTree = "<group>"; };
+		8578EF982447CE5400D9BE50 /* deliverablesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = deliverablesTableViewCell.xib; sourceTree = "<group>"; };
+		8578EF9D24480F2C00D9BE50 /* journeyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyDetailViewController.swift; sourceTree = "<group>"; };
+		8578EF9F24487FCC00D9BE50 /* JourneyDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyDetailSection.swift; sourceTree = "<group>"; };
+		8578EFA124491D1700D9BE50 /* explorerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = explorerCollectionViewController.swift; sourceTree = "<group>"; };
+		8578EFA624491DAA00D9BE50 /* explorerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = explorerCollectionViewCell.swift; sourceTree = "<group>"; };
+		8578EFA724491DAA00D9BE50 /* explorerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = explorerCollectionViewCell.xib; sourceTree = "<group>"; };
+		8578EFAA244CC95E00D9BE50 /* journeyDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,8 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				8523E237244414ED008E53AD /* journey.storyboard */,
-				8523E25824474ACA008E53AD /* journeyTableViewController.swift */,
-				8523E23B244483AC008E53AD /* cell */,
+				8523E25A244786ED008E53AD /* Journey Root Scene */,
+				8523E25B2447871B008E53AD /* Journey Detail Scene */,
 			);
 			path = "module-journey";
 			sourceTree = "<group>";
@@ -221,18 +257,124 @@
 		8523E23624441479008E53AD /* module-explorer */ = {
 			isa = PBXGroup;
 			children = (
-				8523E23924441529008E53AD /* explorer.storyboard */,
+				8578EFA324491D3E00D9BE50 /* Explorer Root Scene */,
+				8578EFA424491D5300D9BE50 /* Explorer Detail Scene */,
 			);
 			path = "module-explorer";
 			sourceTree = "<group>";
 		};
-		8523E23B244483AC008E53AD /* cell */ = {
+		8523E23B244483AC008E53AD /* cells */ = {
 			isa = PBXGroup;
 			children = (
 				8523E256244749B4008E53AD /* journeyTableViewCell.swift */,
 				8523E25424474996008E53AD /* journeyCollectionViewCell.swift */,
 			);
-			path = cell;
+			path = cells;
+			sourceTree = "<group>";
+		};
+		8523E25A244786ED008E53AD /* Journey Root Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8523E25824474ACA008E53AD /* journeyTableViewController.swift */,
+				8523E23B244483AC008E53AD /* cells */,
+			);
+			path = "Journey Root Scene";
+			sourceTree = "<group>";
+		};
+		8523E25B2447871B008E53AD /* Journey Detail Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8523E25D2447876A008E53AD /* journeyDetail.storyboard */,
+				8578EF9F24487FCC00D9BE50 /* JourneyDetailSection.swift */,
+				8578EF9D24480F2C00D9BE50 /* journeyDetailViewController.swift */,
+				8578EFAA244CC95E00D9BE50 /* journeyDetailTableViewController.swift */,
+				8523E25C24478747008E53AD /* cells */,
+			);
+			path = "Journey Detail Scene";
+			sourceTree = "<group>";
+		};
+		8523E25C24478747008E53AD /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8578EF822447CCB500D9BE50 /* thumbnail */,
+				8578EF852447CCFA00D9BE50 /* description */,
+				8578EF842447CCF100D9BE50 /* learning goals */,
+				8578EF832447CCDD00D9BE50 /* constraints */,
+				8578EF862447CD6700D9BE50 /* deliverables */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		8578EF822447CCB500D9BE50 /* thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				8578EF872447CDE100D9BE50 /* thumbnailTableViewCell.swift */,
+				8578EF882447CDE100D9BE50 /* thumbnailTableViewCell.xib */,
+			);
+			path = thumbnail;
+			sourceTree = "<group>";
+		};
+		8578EF832447CCDD00D9BE50 /* constraints */ = {
+			isa = PBXGroup;
+			children = (
+				8578EF932447CE3D00D9BE50 /* constraintsTableViewCell.swift */,
+				8578EF942447CE3D00D9BE50 /* constraintsTableViewCell.xib */,
+			);
+			path = constraints;
+			sourceTree = "<group>";
+		};
+		8578EF842447CCF100D9BE50 /* learning goals */ = {
+			isa = PBXGroup;
+			children = (
+				8578EF8F2447CE2200D9BE50 /* learningGoalsTableViewCell.swift */,
+				8578EF902447CE2200D9BE50 /* learningGoalsTableViewCell.xib */,
+			);
+			path = "learning goals";
+			sourceTree = "<group>";
+		};
+		8578EF852447CCFA00D9BE50 /* description */ = {
+			isa = PBXGroup;
+			children = (
+				8578EF8B2447CE0100D9BE50 /* descriptionTableViewCell.swift */,
+				8578EF8C2447CE0100D9BE50 /* descriptionTableViewCell.xib */,
+			);
+			path = description;
+			sourceTree = "<group>";
+		};
+		8578EF862447CD6700D9BE50 /* deliverables */ = {
+			isa = PBXGroup;
+			children = (
+				8578EF972447CE5400D9BE50 /* deliverablesTableViewCell.swift */,
+				8578EF982447CE5400D9BE50 /* deliverablesTableViewCell.xib */,
+			);
+			path = deliverables;
+			sourceTree = "<group>";
+		};
+		8578EFA324491D3E00D9BE50 /* Explorer Root Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8523E23924441529008E53AD /* explorer.storyboard */,
+				855E22A6244D15A100D79146 /* explorerViewController.swift */,
+				8578EFA124491D1700D9BE50 /* explorerCollectionViewController.swift */,
+				8578EFA524491D6B00D9BE50 /* cells */,
+			);
+			path = "Explorer Root Scene";
+			sourceTree = "<group>";
+		};
+		8578EFA424491D5300D9BE50 /* Explorer Detail Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Explorer Detail Scene";
+			sourceTree = "<group>";
+		};
+		8578EFA524491D6B00D9BE50 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8578EFA624491DAA00D9BE50 /* explorerCollectionViewCell.swift */,
+				8578EFA724491DAA00D9BE50 /* explorerCollectionViewCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,10 +482,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8523E20B24440577008E53AD /* LaunchScreen.storyboard in Resources */,
+				8578EF9A2447CE5400D9BE50 /* deliverablesTableViewCell.xib in Resources */,
 				8523E238244414ED008E53AD /* journey.storyboard in Resources */,
+				8578EF962447CE3D00D9BE50 /* constraintsTableViewCell.xib in Resources */,
 				8523E23A24441529008E53AD /* explorer.storyboard in Resources */,
+				8578EF8A2447CDE100D9BE50 /* thumbnailTableViewCell.xib in Resources */,
+				8578EF8E2447CE0100D9BE50 /* descriptionTableViewCell.xib in Resources */,
+				8578EFA924491DAA00D9BE50 /* explorerCollectionViewCell.xib in Resources */,
 				8523E20824440577008E53AD /* Assets.xcassets in Resources */,
+				8523E25E2447876A008E53AD /* journeyDetail.storyboard in Resources */,
 				8523E20624440576008E53AD /* Main.storyboard in Resources */,
+				8578EF922447CE2200D9BE50 /* learningGoalsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,14 +519,25 @@
 			files = (
 				8523E24124450BC6008E53AD /* Explorer.swift in Sources */,
 				8523E257244749B4008E53AD /* journeyTableViewCell.swift in Sources */,
+				8578EF9E24480F2D00D9BE50 /* journeyDetailViewController.swift in Sources */,
 				8523E20324440576008E53AD /* ViewController.swift in Sources */,
 				8523E24324451222008E53AD /* JourneyRepository.swift in Sources */,
+				8578EF912447CE2200D9BE50 /* learningGoalsTableViewCell.swift in Sources */,
 				8523E24524451236008E53AD /* ExplorerRepository.swift in Sources */,
 				8523E1FF24440576008E53AD /* AppDelegate.swift in Sources */,
+				8578EF952447CE3D00D9BE50 /* constraintsTableViewCell.swift in Sources */,
 				8523E25924474ACA008E53AD /* journeyTableViewController.swift in Sources */,
+				855E22A7244D15A100D79146 /* explorerViewController.swift in Sources */,
 				8523E20124440576008E53AD /* SceneDelegate.swift in Sources */,
+				8578EFAB244CC95E00D9BE50 /* journeyDetailTableViewController.swift in Sources */,
 				8523E25524474996008E53AD /* journeyCollectionViewCell.swift in Sources */,
 				8523E23F24450432008E53AD /* Journey.swift in Sources */,
+				8578EF892447CDE100D9BE50 /* thumbnailTableViewCell.swift in Sources */,
+				8578EF8D2447CE0100D9BE50 /* descriptionTableViewCell.swift in Sources */,
+				8578EFA224491D1700D9BE50 /* explorerCollectionViewController.swift in Sources */,
+				8578EF992447CE5400D9BE50 /* deliverablesTableViewCell.swift in Sources */,
+				8578EFA824491DAA00D9BE50 /* explorerCollectionViewCell.swift in Sources */,
+				8578EFA024487FCC00D9BE50 /* JourneyDetailSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

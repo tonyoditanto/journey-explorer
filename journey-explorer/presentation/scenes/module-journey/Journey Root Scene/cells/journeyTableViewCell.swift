@@ -30,6 +30,14 @@ class journeyTableViewCell: UITableViewCell {
         journeyImageView.layer.cornerRadius = 10.0
         journeyImageView.layer.masksToBounds = true
         
+        journeyImageView.layer.shadowColor = UIColor.black.cgColor
+        journeyImageView.layer.shadowOpacity = 1
+        journeyImageView.layer.shadowOffset = .zero
+        journeyImageView.layer.shadowRadius = 10.0
+        journeyImageView.layer.shadowPath = UIBezierPath(rect: journeyImageView.bounds).cgPath
+        journeyImageView.layer.shouldRasterize = true
+        journeyImageView.layer.rasterizationScale = UIScreen.main.scale
+        
 
     }
     

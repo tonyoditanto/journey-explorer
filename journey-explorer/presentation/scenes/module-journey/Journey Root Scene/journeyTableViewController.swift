@@ -21,12 +21,14 @@ class journeyTableViewController: UITableViewController {
         setupSearchController()
         fetchJourneys()
     }
-
+    
+    // MARK: - Fetch Journey Data
     func fetchJourneys(){
         let repository = JourneyRepository()
         journeys = repository.fetchJourneys()
     }
     
+    // MARK: - Setup Search Bar
     func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -35,8 +37,6 @@ class journeyTableViewController: UITableViewController {
         definesPresentationContext = true
     }
     
-    
-        
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -45,19 +45,15 @@ class journeyTableViewController: UITableViewController {
         return journeys.count
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 452
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 496
-    }
-        
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let journey = journeys[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "journeyTableViewCell") as! journeyTableViewCell
-        
+
         cell.journeyCell = journey
         if indexPath.row == 3{
             cell.journeyImageView.contentMode = UIView.ContentMode.scaleAspectFill
@@ -65,9 +61,40 @@ class journeyTableViewController: UITableViewController {
         
     return cell
     }
-        
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        //performSegue(withIdentifier: "showJourneyDetail", sender: indexPath)
+        showJourneyDetailScene(at: indexPath)
+    }
+    
+    // MARK: - Sent Data to other ViewController
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showJourneyDetail" {
+//            let destination = segue.destination as! journeyDetailViewController
+//            if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell){
+//                let journey = self.journeys[indexPath.row]
+//                destination.journey = journey
+//            }
+//        }
+//
+//    }
+    
 }
 
+extension journeyTableViewController {
+    
+    func showJourneyDetailScene(at indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "journeyDetail", bundle: nil)
+        let destination = storyboard.instantiateViewController(identifier: "journeyDetailTableViewController") as! journeyDetailTableViewController
+        destination.journey = journeys[indexPath.row]
+        destination.modalPresentationStyle = .fullScreen
+        self.present(destination, animated: true, completion: nil)
+        print(journeys[indexPath.row].journeyTitle)
+    }
+}
+
+// MARK: - Search Bar Filter
 extension journeyTableViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
