@@ -24,6 +24,8 @@ class journeyDetailTableViewController: UITableViewController {
 //        self.navigationController?.view.backgroundColor = .clear
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 164
+        //tableView.contentInset = UIEdgeInsets.init(top: <#T##CGFloat#>, left: <#T##CGFloat#>, bottom: <#T##CGFloat#>, right: <#T##CGFloat#>)
+        setTableViewContentInsetToCustom()
         setupTableView()
 
     }
@@ -141,6 +143,7 @@ extension journeyDetailTableViewController {
         
 //        cell.configureCell(ImageView: sendDataJourneyImageview, Title: sendDataJourneyTitle, Duration: sendDataJourneyDuration, Team: sendDataJourneyTeam)
         cell.journeyCell = self.journey
+        cell.delegate = self
         return cell
     }
 
@@ -214,22 +217,27 @@ extension journeyDetailTableViewController {
 extension journeyDetailTableViewController{
     
      fileprivate func setTableViewContentInsetToCustom() {
-         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-     }
+          tableView.contentInset = UIEdgeInsets(top: -getStatusBarHeight(), left: 0, bottom: 0, right: 0)
+      }
 
 
-    internal func getTopInsetHeight() -> CGFloat {
-         //guard let navBarHeight = getNavBarHeight() else { return 0 }
-         return 0
-     }
-     
-     private func getStatusBarHeight() -> CGFloat {
-         let statusBarSize = UIApplication.shared.statusBarFrame.size
-         return Swift.min(statusBarSize.width, statusBarSize.height)
-     }
-     
-     internal func getNavBarHeight() -> CGFloat? {
-         return navigationController?.navigationBar.frame.size.height
-     }
+     internal func getTopInsetHeight() -> CGFloat {
+          guard let navBarHeight = getNavBarHeight() else { return 0 }
+          return getStatusBarHeight() + navBarHeight
+      }
+      
+      private func getStatusBarHeight() -> CGFloat {
+          let statusBarSize = UIApplication.shared.statusBarFrame.size
+          return Swift.min(statusBarSize.width, statusBarSize.height)
+      }
+      
+      internal func getNavBarHeight() -> CGFloat? {
+          return navigationController?.navigationBar.frame.size.height
+      }}
+
+extension journeyDetailTableViewController : ThumbnailTableViewCellDelegate{
+    func closeButton() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 

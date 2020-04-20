@@ -55,9 +55,8 @@
                                 </cells>
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="22B-yZ-ehY">
-                                <rect key="frame" x="80" y="100" width="254" height="32"/>
+                                <rect key="frame" x="18" y="100" width="378" height="32"/>
                                 <segments>
-                                    <segment title="All"/>
                                     <segment title="Senior"/>
                                     <segment title="Junior"/>
                                 </segments>
@@ -67,10 +66,10 @@
                         <constraints>
                             <constraint firstItem="jUy-Yz-Hpc" firstAttribute="top" secondItem="22B-yZ-ehY" secondAttribute="bottom" constant="12" id="5Kh-Fa-7Nd"/>
                             <constraint firstItem="jUy-Yz-Hpc" firstAttribute="leading" secondItem="dMd-dj-cHd" secondAttribute="leading" id="D24-PS-MVX"/>
-                            <constraint firstItem="22B-yZ-ehY" firstAttribute="leading" secondItem="dMd-dj-cHd" secondAttribute="leading" constant="80" id="EQ7-X0-bJY"/>
+                            <constraint firstItem="22B-yZ-ehY" firstAttribute="leading" secondItem="dMd-dj-cHd" secondAttribute="leading" constant="18" id="EQ7-X0-bJY"/>
                             <constraint firstItem="22B-yZ-ehY" firstAttribute="top" secondItem="dMd-dj-cHd" secondAttribute="top" constant="12" id="HYp-8z-2EU"/>
                             <constraint firstItem="jUy-Yz-Hpc" firstAttribute="bottom" secondItem="dMd-dj-cHd" secondAttribute="bottom" id="Kum-s1-fgk"/>
-                            <constraint firstItem="dMd-dj-cHd" firstAttribute="trailing" secondItem="22B-yZ-ehY" secondAttribute="trailing" constant="80" id="ScD-bP-N2C"/>
+                            <constraint firstItem="dMd-dj-cHd" firstAttribute="trailing" secondItem="22B-yZ-ehY" secondAttribute="trailing" constant="18" id="ScD-bP-N2C"/>
                             <constraint firstItem="jUy-Yz-Hpc" firstAttribute="trailing" secondItem="dMd-dj-cHd" secondAttribute="trailing" id="TQ1-hQ-1DP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dMd-dj-cHd"/>

@@ -15,6 +15,7 @@ class journeyTableViewController: UITableViewController {
     var journeys = [Journey]()
     var searchTextField: UITextField?
     let searchController = UISearchController(searchResultsController: nil)
+    var selectedJourney : Journey?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,21 +65,18 @@ class journeyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //performSegue(withIdentifier: "showJourneyDetail", sender: indexPath)
-        showJourneyDetailScene(at: indexPath)
+        selectedJourney = journeys[indexPath.row]
+        performSegue(withIdentifier: "showJourneyDetail", sender: indexPath)
+        //showJourneyDetailScene(at: indexPath)
     }
     
     // MARK: - Sent Data to other ViewController
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showJourneyDetail" {
-//            let destination = segue.destination as! journeyDetailViewController
-//            if let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell){
-//                let journey = self.journeys[indexPath.row]
-//                destination.journey = journey
-//            }
-//        }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showJourneyDetail" {
+            let destination = segue.destination as! journeyDetailViewController
+            destination.journey = selectedJourney
+        }
+    }
     
 }
 

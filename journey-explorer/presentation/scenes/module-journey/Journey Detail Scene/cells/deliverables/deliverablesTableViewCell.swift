@@ -14,33 +14,11 @@ class deliverablesTableViewCell: UITableViewCell {
     @IBOutlet weak var journeyDeliverablesLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
-//    var journey: Journey!{
-//        didSet{
-//            configureCell()
-//        }
-//    }
-//
-//    func configureCell(Deliverables journeyDeliverables : [String]) {
-//        configureLabel(Deliverables : journeyDeliverables)
-//    }
-//
-//    func configureLabel(Deliverables journeyDeliverables : [String]){
-//        var mergeDeliverables: String = ""
-//        for index in 1...journeyDeliverables.count {
-//            mergeDeliverables += "\(journeyDeliverables[index])\n"
-//        }
-//        journeyDeliverablesLabel.text = mergeDeliverables
-//
-//    }
     
     var journeyCell: Journey!{
         didSet{

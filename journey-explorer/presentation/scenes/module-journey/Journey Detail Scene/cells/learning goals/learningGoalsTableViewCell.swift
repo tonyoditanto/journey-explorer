@@ -20,28 +20,7 @@ class learningGoalsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
-//    var journey: Journey!{
-//        didSet{
-//            configureCell()
-//        }
-//    }
-//
-//    func configureCell(LearningGoals journeyLearningGoals : [String]) {
-//        configureLabel(LearningGoals : journeyLearningGoals)
-//    }
-//
-//    func configureLabel(LearningGoals journeyLearningGoals : [String]){
-//        var mergeLearningGoals: String = ""
-//        for index in 1...journeyLearningGoals.count {
-//            mergeLearningGoals += "\(journeyLearningGoals[index])\n"
-//        }
-//        journeyLearningGoalsLabel.text = mergeLearningGoals
-//
-//    }
     
         var journeyCell: Journey!{
             didSet{

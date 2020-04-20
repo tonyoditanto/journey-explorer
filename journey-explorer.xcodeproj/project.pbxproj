@@ -38,7 +38,6 @@
 		8578EF9A2447CE5400D9BE50 /* deliverablesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EF982447CE5400D9BE50 /* deliverablesTableViewCell.xib */; };
 		8578EF9E24480F2D00D9BE50 /* journeyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF9D24480F2C00D9BE50 /* journeyDetailViewController.swift */; };
 		8578EFA024487FCC00D9BE50 /* JourneyDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EF9F24487FCC00D9BE50 /* JourneyDetailSection.swift */; };
-		8578EFA224491D1700D9BE50 /* explorerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EFA124491D1700D9BE50 /* explorerCollectionViewController.swift */; };
 		8578EFA824491DAA00D9BE50 /* explorerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EFA624491DAA00D9BE50 /* explorerCollectionViewCell.swift */; };
 		8578EFA924491DAA00D9BE50 /* explorerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8578EFA724491DAA00D9BE50 /* explorerCollectionViewCell.xib */; };
 		8578EFAB244CC95E00D9BE50 /* journeyDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8578EFAA244CC95E00D9BE50 /* journeyDetailTableViewController.swift */; };
@@ -99,7 +98,6 @@
 		8578EF982447CE5400D9BE50 /* deliverablesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = deliverablesTableViewCell.xib; sourceTree = "<group>"; };
 		8578EF9D24480F2C00D9BE50 /* journeyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyDetailViewController.swift; sourceTree = "<group>"; };
 		8578EF9F24487FCC00D9BE50 /* JourneyDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyDetailSection.swift; sourceTree = "<group>"; };
-		8578EFA124491D1700D9BE50 /* explorerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = explorerCollectionViewController.swift; sourceTree = "<group>"; };
 		8578EFA624491DAA00D9BE50 /* explorerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = explorerCollectionViewCell.swift; sourceTree = "<group>"; };
 		8578EFA724491DAA00D9BE50 /* explorerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = explorerCollectionViewCell.xib; sourceTree = "<group>"; };
 		8578EFAA244CC95E00D9BE50 /* journeyDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journeyDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 			children = (
 				8523E23924441529008E53AD /* explorer.storyboard */,
 				855E22A6244D15A100D79146 /* explorerViewController.swift */,
-				8578EFA124491D1700D9BE50 /* explorerCollectionViewController.swift */,
 				8578EFA524491D6B00D9BE50 /* cells */,
 			);
 			path = "Explorer Root Scene";
@@ -534,7 +531,6 @@
 				8523E23F24450432008E53AD /* Journey.swift in Sources */,
 				8578EF892447CDE100D9BE50 /* thumbnailTableViewCell.swift in Sources */,
 				8578EF8D2447CE0100D9BE50 /* descriptionTableViewCell.swift in Sources */,
-				8578EFA224491D1700D9BE50 /* explorerCollectionViewController.swift in Sources */,
 				8578EF992447CE5400D9BE50 /* deliverablesTableViewCell.swift in Sources */,
 				8578EFA824491DAA00D9BE50 /* explorerCollectionViewCell.swift in Sources */,
 				8578EFA024487FCC00D9BE50 /* JourneyDetailSection.swift in Sources */,

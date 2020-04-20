@@ -15,33 +15,11 @@ class constraintsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
-//    var journey: Journey!{
-//        didSet{
-//            configureCell()
-//        }
-//    }
-//
-//    func configureCell(Constraints journeyConstraints : [String]) {
-//        configureLabel(Constraints : journeyConstraints)
-//    }
-//
-//    func configureLabel(Constraints journeyConstraints : [String]){
-//        var mergeConstraints: String = ""
-//        for index in 1...journeyConstraints.count {
-//            mergeConstraints += "\(journeyConstraints[index])\n"
-//        }
-//        journeyConstraintsLabel.text = mergeConstraints
-//
-//    }
     
     var journeyCell: Journey!{
         didSet{

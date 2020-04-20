@@ -27,14 +27,11 @@
                                             <rect key="frame" x="17" y="18" width="380" height="416"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="LvF-ye-9v7" secondAttribute="height" multiplier="95:104" id="7JO-Wp-Tgv"/>
+                                                <constraint firstAttribute="width" secondItem="LvF-ye-9v7" secondAttribute="height" multiplier="95:104" id="2Cq-SR-bac"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="journeyTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK4-2R-Bta">
                                             <rect key="frame" x="36" y="358" width="187" height="41"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="RK4-2R-Bta" secondAttribute="height" multiplier="187:41" id="vCn-Na-wTy"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -42,7 +39,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="journeySubtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-1z-CHD">
                                             <rect key="frame" x="36" y="400" width="120" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="h6b-1z-CHD" secondAttribute="height" multiplier="40:7" id="jLb-Sa-7jK"/>
+                                                <constraint firstAttribute="width" secondItem="h6b-1z-CHD" secondAttribute="height" multiplier="40:7" id="m0a-iD-lBg"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <color key="textColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,14 +47,14 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="LvF-ye-9v7" firstAttribute="top" secondItem="j3U-1U-E2G" secondAttribute="top" constant="18" id="0x7-EQ-pwD"/>
-                                        <constraint firstItem="h6b-1z-CHD" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leadingMargin" constant="16" id="7Pp-lX-HgT"/>
-                                        <constraint firstItem="LvF-ye-9v7" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leading" constant="17" id="HVY-8e-W4c"/>
-                                        <constraint firstAttribute="trailing" secondItem="LvF-ye-9v7" secondAttribute="trailing" constant="17" id="Qjq-rQ-8qX"/>
-                                        <constraint firstAttribute="bottom" secondItem="LvF-ye-9v7" secondAttribute="bottom" constant="18" id="Yqe-V1-1wP"/>
-                                        <constraint firstItem="RK4-2R-Bta" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leadingMargin" constant="16" id="hJT-ZX-fBR"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="h6b-1z-CHD" secondAttribute="bottom" constant="20" id="iH9-gO-0ns"/>
-                                        <constraint firstItem="h6b-1z-CHD" firstAttribute="top" secondItem="RK4-2R-Bta" secondAttribute="bottom" constant="1" id="mCZ-hd-atm"/>
+                                        <constraint firstItem="LvF-ye-9v7" firstAttribute="top" secondItem="j3U-1U-E2G" secondAttribute="top" constant="18" id="Hyq-Df-Jdf"/>
+                                        <constraint firstAttribute="bottom" secondItem="LvF-ye-9v7" secondAttribute="bottom" constant="18" id="KWC-4Q-A2w"/>
+                                        <constraint firstAttribute="trailing" secondItem="LvF-ye-9v7" secondAttribute="trailing" constant="17" id="Ob8-kU-tes"/>
+                                        <constraint firstItem="h6b-1z-CHD" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leadingMargin" constant="16" id="eeh-iM-1Dz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="h6b-1z-CHD" secondAttribute="bottom" constant="20" id="lV3-hi-nza"/>
+                                        <constraint firstItem="h6b-1z-CHD" firstAttribute="top" secondItem="RK4-2R-Bta" secondAttribute="bottom" constant="1" id="rkb-HO-R2v"/>
+                                        <constraint firstItem="RK4-2R-Bta" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leadingMargin" constant="16" id="w4I-yE-yrH"/>
+                                        <constraint firstItem="LvF-ye-9v7" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leading" constant="17" id="ySm-OK-GLR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <viewLayoutGuide key="safeArea" id="nhg-wt-5T1"/>
@@ -104,7 +101,7 @@
         <!--journeyDetail-->
         <scene sceneID="2an-Wo-tII">
             <objects>
-                <viewControllerPlaceholder storyboardName="journeyDetail" id="Ej2-oC-wUd" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="journeyDetail" storyboardName="journeyDetail" id="Ej2-oC-wUd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eM0-xe-6TI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="678" y="112"/>

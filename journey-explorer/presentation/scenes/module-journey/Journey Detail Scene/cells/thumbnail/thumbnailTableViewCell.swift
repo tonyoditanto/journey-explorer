@@ -8,12 +8,13 @@
 
 import UIKit
 
-//protocol ButtonTapDelegate {
-//  func didTapButton()
-//}
+protocol ThumbnailTableViewCellDelegate {
+  func closeButton()
+}
 
 class thumbnailTableViewCell: UITableViewCell {
     
+    var delegate:ThumbnailTableViewCellDelegate?
     static let cellID = "thumbnailTableViewCell"
     static let cellHeight: CGFloat = 452
     
@@ -61,35 +62,7 @@ class thumbnailTableViewCell: UITableViewCell {
     }
 
     @IBAction func closeModal(_ sender: Any) {
-        
+        delegate?.closeButton()
     }
-    //    var journey: Journey!{
-//        didSet{
-//            configureCell()
-//        }
-//    }
-//
-//    func configureCell(ImageView journeyImageView : String, Title journeyTitle : String, Duration journeyDuration :  Int, Team journeyTeam : Bool) {
-//        configureImage(ImageView : journeyImageView)
-//        configureLabel(Title : journeyTitle, Duration : journeyDuration, Team : journeyTeam)
-////        self.journeyImageView.image = UIImage(named: journeyImageView)
-//    }
-//
-//    func configureImage(ImageView journeyImageView : String){
-//        self.journeyImageView.image = UIImage(named: journeyImageView)
-//    }
-//
-//    func configureLabel(Title journeyTitle : String, Duration journeyDuration :  Int, Team journeyTeam : Bool ){
-//        self.journeyTitleLabel.text = journeyTitle
-//
-//        switch journeyTeam {
-//        case true:
-//            self.journeySubtitleLabel.text = "Group Challenge - \(journeyDuration) Weeks"
-//        default:
-//            self.journeySubtitleLabel.text = "Individual Challenge - \(journeyDuration) Weeks"
-//        }
-//
-//    }
-    
     
 }

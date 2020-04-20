@@ -8,20 +8,17 @@
 
 import UIKit
 
-class journeyDetailViewController: UIViewController {
+class journeyDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let sectionTitles = ["Thumbnail", "Description", "Learning Goals", "Constraints", "Deliverables"]
     
-    @IBOutlet weak var tableView: UITableView!
-    
-//    var sendDataJourneyTitle : String = ""
-//    var sendDataJourneyTeam : Bool = true
-//    var sendDataJourneyDuration : Int = 0
-//    var sendDataJourneyImageview : String = ""
-//    var sendDataJourneyDescription : String = ""
-//    var sendDataJourneyLearningGoals : [String] = []
-//    var sendDataJourneyConstraints : [String] = []
-//    var sendDataJourneyDeliverables : [String] = []
+    @IBOutlet weak var tableView: UITableView!{
+        didSet{
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
+
     var journey : Journey!
     
     override func viewDidLoad() {
@@ -31,6 +28,7 @@ class journeyDetailViewController: UIViewController {
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
 //        self.navigationController?.navigationBar.isTranslucent = true
 //        self.navigationController?.view.backgroundColor = .clear
+        
         setupTableView()
 
     }
@@ -40,9 +38,10 @@ class journeyDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    
 }
 
-extension journeyDetailViewController{
+extension journeyDetailViewController {
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,6 +51,10 @@ extension journeyDetailViewController{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+    
+    
+    
+    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = makeHeaderView(at: section)
@@ -145,6 +148,7 @@ extension journeyDetailViewController{
         
 //        cell.configureCell(ImageView: sendDataJourneyImageview, Title: sendDataJourneyTitle, Duration: sendDataJourneyDuration, Team: sendDataJourneyTeam)
         cell.journeyCell = self.journey
+        cell.delegate = self
         return cell
     }
 
@@ -212,4 +216,17 @@ extension journeyDetailViewController{
     }
 
 }
+
+extension journeyDetailViewController{
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
+}
+
+extension journeyDetailViewController : ThumbnailTableViewCellDelegate{
+    func closeButton() {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
 
