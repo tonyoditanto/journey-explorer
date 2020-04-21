@@ -22,6 +22,7 @@ enum explorerViewControllerCellRole: String {
 
 class explorerViewController: UIViewController {
     
+    var searchText = ""
     var filteredExplorers = [Explorer]()
     var explorers = [Explorer]()
     var selectedSegmentIndex = 0
@@ -38,7 +39,6 @@ class explorerViewController: UIViewController {
         fetchExplorers()
         setupSearchController()
         setupCollectionView()
-
     }
     
     // MARK: - Fetch Explorer Data
@@ -52,7 +52,6 @@ class explorerViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
-        //searchController.searchBar.scopeButtonTitles = ["All","Tech", "Design", "Others"]
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
@@ -134,7 +133,6 @@ extension explorerViewController{
         default: selectedActionSheetRole = .all
         }
         collectionView.reloadData()
-        
     }
 }
 
@@ -151,15 +149,56 @@ extension explorerViewController: UICollectionViewDataSource, UICollectionViewDe
             
             switch selectedActionSheetRole {
             case .tech:
-                let seniorTechExplorers = seniorExplorers.filter { return $0.explorerRole == .codingFacilitator}
-                return seniorTechExplorers.count
+                if searchText.isEmpty == true {
+                    let seniorTechExplorers = seniorExplorers.filter {
+                        return $0.explorerRole == .codingFacilitator
+                    }
+                    return seniorTechExplorers.count
+                }
+                if searchText.isEmpty == false {
+                    let seniorTechExplorers = seniorExplorers.filter {
+                        return $0.explorerRole == .codingFacilitator && $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return seniorTechExplorers.count
+                }
             case .design:
-                let seniorDesignExplorers = seniorExplorers.filter { return $0.explorerRole == .designFacilitator}
-                return seniorDesignExplorers.count
+                if searchText.isEmpty == true {
+                    let seniorDesignExplorers = seniorExplorers.filter {
+                        return $0.explorerRole == .designFacilitator
+                    }
+                    return seniorDesignExplorers.count
+                }
+                if searchText.isEmpty == false {
+                    let seniorDesignExplorers = seniorExplorers.filter {
+                        return $0.explorerRole == .designFacilitator && $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return seniorDesignExplorers.count
+                }
             case .other:
-                let seniorOtherExplorers = seniorExplorers.filter { return $0.explorerRole == .professionalFacilitator || $0.explorerRole == .academyManager }
-                return seniorOtherExplorers.count
-            case .all: return seniorExplorers.count
+                if searchText.isEmpty == true {
+                    let seniorOtherExplorers = seniorExplorers.filter {
+                        return $0.explorerRole == .professionalFacilitator || $0.explorerRole == .academyManager
+                    }
+                    return seniorOtherExplorers.count
+                }
+                if searchText.isEmpty == false {
+                    let seniorOtherExplorers = seniorExplorers.filter {
+                        return ($0.explorerRole == .professionalFacilitator || $0.explorerRole == .academyManager) && $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return seniorOtherExplorers.count
+                }
+                
+            case .all:
+                if searchText.isEmpty == true {
+                    let seniorAllExplorer = seniorExplorers
+                    return seniorAllExplorer.count
+                }
+                if searchText.isEmpty == false {
+                    let seniorAllExplorers = seniorExplorers.filter{
+                        return $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return seniorAllExplorers.count
+                }
 
             default:
                 return seniorExplorers.count
@@ -171,15 +210,57 @@ extension explorerViewController: UICollectionViewDataSource, UICollectionViewDe
             
             switch selectedActionSheetRole {
             case .tech:
-                let juniorTechExplorers = juniorExplorers.filter { return $0.explorerRole == .tech}
-                return juniorTechExplorers.count
+                if searchText.isEmpty == true {
+                    let juniorTechExplorers = juniorExplorers.filter {
+                        return $0.explorerRole == .tech
+                    }
+                    return juniorTechExplorers.count
+                }
+                if searchText.isEmpty == false {
+                    let juniorTechExplorers = juniorExplorers.filter {
+                    return $0.explorerRole == .tech && $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return juniorTechExplorers.count
+                }
+                
             case .design:
-                let juniorDesignExplorers = juniorExplorers.filter { return $0.explorerRole == .design}
-                return juniorDesignExplorers.count
+                if searchText.isEmpty == true {
+                    let juniorDesignExplorers = juniorExplorers.filter {
+                        return $0.explorerRole == .design
+                    }
+                    return juniorDesignExplorers.count
+                }
+                if searchText.isEmpty == false {
+                    let juniorDesignExplorers = juniorExplorers.filter {
+                    return $0.explorerRole == .design && $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return juniorDesignExplorers.count
+                }
             case .other:
-                let juniorOtherExplorers = juniorExplorers.filter { return $0.explorerRole == .other}
-                return juniorOtherExplorers.count
-            case .all: return juniorExplorers.count
+                if searchText.isEmpty == true {
+                    let juniorOtherExplorers = juniorExplorers.filter {
+                        return $0.explorerRole == .other
+                    }
+                    return juniorOtherExplorers.count
+                }
+                if searchText.isEmpty == false {
+                    let juniorOtherExplorers = juniorExplorers.filter {
+                    return $0.explorerRole == .other && $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return juniorOtherExplorers.count
+                }
+                
+            case .all:
+                if searchText.isEmpty == true {
+                    let juniorAllExplorer = juniorExplorers
+                    return juniorAllExplorer.count
+                }
+                if searchText.isEmpty == false {
+                    let juniorAllExplorers = juniorExplorers.filter{
+                        return $0.explorerName.lowercased().contains(searchText)
+                    }
+                    return juniorAllExplorers.count
+                }
                 
             default:
                 return juniorExplorers.count
@@ -187,7 +268,6 @@ extension explorerViewController: UICollectionViewDataSource, UICollectionViewDe
         }
         
         return 0
-        //return explorers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -199,11 +279,21 @@ extension explorerViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func setFilteredExplorers(){
         if selectedSegmentType == .senior{
-            filteredExplorers = getExplorers(forType: .senior, forRole: selectedActionSheetRole)
+            if searchText.isEmpty == true {
+                filteredExplorers = getExplorers(forType: .senior, forRole: selectedActionSheetRole)
+            }
+            if searchText.isEmpty == false {
+                filteredExplorers = getExplorers(forType: .senior, forRole: selectedActionSheetRole).filter { $0.explorerName.lowercased().contains(searchText) }
+            }
         }
         
         if selectedSegmentType == .junior{
-            filteredExplorers = getExplorers(forType: .junior, forRole: selectedActionSheetRole)
+            if searchText.isEmpty == true {
+                filteredExplorers = getExplorers(forType: .junior, forRole: selectedActionSheetRole)
+            }
+            if searchText.isEmpty == false {
+                filteredExplorers = getExplorers(forType: .junior, forRole: selectedActionSheetRole).filter { $0.explorerName.lowercased().contains(searchText) }
+            }
         }
     }
     
@@ -241,7 +331,6 @@ extension explorerViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-//        selectedExplorer = explorers[indexPath.row]
         selectedExplorer = self.filteredExplorers[indexPath.row]
         performSegue(withIdentifier: "showExplorerDetail", sender: indexPath)
     }
@@ -261,22 +350,10 @@ extension explorerViewController: UICollectionViewDataSource, UICollectionViewDe
 extension explorerViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else { return }
-        //scopeControlDidTap(for: searchController)
-        print(text)
+        // Get search text
+        let searchText: String = searchController.searchBar.text?.lowercased() ?? ""
+        self.searchText = searchText
+        //print(searchText)
+        collectionView.reloadData()
     }
-    
-    func scopeControlDidTap(for searchController: UISearchController){
-//        selectedScopeIndex = searchController.searchBar.selectedScopeButtonIndex
-//
-//        switch selectedScopeIndex {
-//        case 0: selectedScopeRole = .all
-//        case 1: selectedScopeRole = .tech
-//        case 2: selectedScopeRole = .design
-//        case 3: selectedScopeRole = .other
-//        default: selectedSegmentType = .senior
-//        }
-//        collectionView.reloadData()
-    }
-    
 }

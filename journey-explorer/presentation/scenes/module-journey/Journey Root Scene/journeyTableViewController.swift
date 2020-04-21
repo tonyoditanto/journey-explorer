@@ -13,6 +13,7 @@ class journeyTableViewController: UITableViewController {
     @IBOutlet var journeyTableView: UITableView!
     
     var journeys = [Journey]()
+    var filteredJourneys = [Journey]()
     var searchTextField: UITextField?
     let searchController = UISearchController(searchResultsController: nil)
     var selectedJourney : Journey?
@@ -21,6 +22,7 @@ class journeyTableViewController: UITableViewController {
         super.viewDidLoad()
         setupSearchController()
         fetchJourneys()
+        filteredJourneys = journeys
     }
     
     // MARK: - Fetch Journey Data
@@ -43,7 +45,7 @@ class journeyTableViewController: UITableViewController {
     }
         
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return journeys.count
+        return filteredJourneys.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -52,7 +54,7 @@ class journeyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let journey = journeys[indexPath.row]
+        let journey = filteredJourneys[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "journeyTableViewCell") as! journeyTableViewCell
 
         cell.journeyCell = journey
@@ -65,7 +67,7 @@ class journeyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedJourney = journeys[indexPath.row]
+        selectedJourney = filteredJourneys[indexPath.row]
 //        performSegue(withIdentifier: "showJourneyDetail", sender: indexPath)
         showJourneyDetailScene(at: indexPath)
     }
@@ -96,8 +98,16 @@ extension journeyTableViewController {
 extension journeyTableViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else { return }
-        print(text)
+        let searchText: String = searchController.searchBar.text?.lowercased() ?? ""
+        filteredJourneys = journeys
+        if searchText.isEmpty{
+            filteredJourneys = journeys
+        }
+        if !searchText.isEmpty {
+            filteredJourneys = filteredJourneys.filter{ $0.journeyTitle.lowercased().contains(searchText)}
+        }
+        //print(searchText)
+        tableView.reloadData()
     }
     
 }

@@ -105,9 +105,9 @@ extension explorerDetailTableViewController {
         if indexPath.section == ExplorerDetailSection.SECTION_PHOTO {
             return 414
         }
-        if indexPath.section == ExplorerDetailSection.SECTION_PROFILE {
-            return 80
-        }
+//        if indexPath.section == ExplorerDetailSection.SECTION_PROFILE {
+//            return 80
+//        }
         if indexPath.section == ExplorerDetailSection.SECTION_SIMILAR_ROLE {
             return 313
         }

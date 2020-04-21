@@ -17,25 +17,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="explorerSubtitle" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-ku-xFn">
-                        <rect key="frame" x="16" y="75.5" width="382" height="20.5"/>
+                        <rect key="frame" x="16" y="62" width="382" height="20.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="explorerName" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQb-cI-4V2">
-                        <rect key="frame" x="16" y="33.5" width="382" height="41"/>
+                        <rect key="frame" x="16" y="20" width="382" height="41"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="dQb-cI-4V2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="6lm-zn-Gnt"/>
                     <constraint firstAttribute="trailing" secondItem="dQb-cI-4V2" secondAttribute="trailing" constant="16" id="8ga-Bl-lbF"/>
-                    <constraint firstAttribute="bottom" secondItem="CHn-ku-xFn" secondAttribute="bottom" constant="4" id="Bt1-8e-mr1"/>
+                    <constraint firstItem="CHn-ku-xFn" firstAttribute="top" secondItem="dQb-cI-4V2" secondAttribute="bottom" constant="1" id="A7t-ek-7Xw"/>
                     <constraint firstItem="CHn-ku-xFn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="FtE-lL-tbs"/>
                     <constraint firstItem="dQb-cI-4V2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PjX-kB-Lkb"/>
                     <constraint firstAttribute="trailing" secondItem="CHn-ku-xFn" secondAttribute="trailing" constant="16" id="XsK-Tb-Mv4"/>
-                    <constraint firstItem="CHn-ku-xFn" firstAttribute="top" secondItem="dQb-cI-4V2" secondAttribute="bottom" constant="1" id="x0U-BO-VfW"/>
+                    <constraint firstAttribute="bottom" secondItem="CHn-ku-xFn" secondAttribute="bottom" constant="17.5" id="dbW-c7-owe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
