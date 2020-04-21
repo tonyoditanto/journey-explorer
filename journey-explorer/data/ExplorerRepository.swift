@@ -21,11 +21,11 @@ class ExplorerRepository {
                                   explorerCanHelpWith: ["Coding Basic"]))
         
         explorers.append(Explorer(explorerID: 2,
-                                  explorerName: "Alifudin Aziz",
+                                  explorerName: "Albert Pangestu",
                                   explorerType: .junior,
                                   explorerShift: .morning,
                                   explorerRole: .tech,
-                                  explorerImageName: "Aziz_MO",
+                                  explorerImageName: "Albert_MO",
                                   explorerWantToLearn: [""],
                                   explorerCanHelpWith: [""]))
         

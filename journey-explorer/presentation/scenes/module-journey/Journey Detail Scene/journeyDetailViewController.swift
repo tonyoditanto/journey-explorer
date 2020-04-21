@@ -28,17 +28,10 @@ class journeyDetailViewController: UIViewController, UITableViewDataSource, UITa
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
 //        self.navigationController?.navigationBar.isTranslucent = true
 //        self.navigationController?.view.backgroundColor = .clear
-        
+        setTableViewContentInsetToCustom()
         setupTableView()
 
     }
-    
-    // MARK: - Dismiss Detail Journey Modal
-    @IBAction func closeDetailJourney(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        
-    }
-    
 }
 
 extension journeyDetailViewController {
@@ -51,10 +44,6 @@ extension journeyDetailViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
-    
-    
-    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = makeHeaderView(at: section)
@@ -105,8 +94,6 @@ extension journeyDetailViewController {
 
     
     func setupTableView() {
-//        print(journey.journeyTitle)
-//        print(thumbnailTableViewCell.cellID)
         registerThumbnailCell()
         registerDescriptionCell()
         registerLearningGoalsCell()
@@ -145,8 +132,6 @@ extension journeyDetailViewController {
     
     func makeThumbnailCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: thumbnailTableViewCell.cellID, for: indexPath) as! thumbnailTableViewCell
-        
-//        cell.configureCell(ImageView: sendDataJourneyImageview, Title: sendDataJourneyTitle, Duration: sendDataJourneyDuration, Team: sendDataJourneyTeam)
         cell.journeyCell = self.journey
         cell.delegate = self
         return cell
@@ -154,28 +139,24 @@ extension journeyDetailViewController {
 
     func makeDescriptionCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: descriptionTableViewCell.cellID, for: indexPath) as! descriptionTableViewCell
-//        cell.configureCell(Description: description)
         cell.journeyCell = self.journey
         return cell
     }
     
     func makeLearningGoalsCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: learningGoalsTableViewCell.cellID, for: indexPath) as! learningGoalsTableViewCell
-//        cell.configureCell(LearningGoals: sendDataJourneyLearningGoals)
         cell.journeyCell = self.journey
         return cell
     }
     
     func makeConstraintsCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: constraintsTableViewCell.cellID, for: indexPath) as! constraintsTableViewCell
-//        cell.configureCell(Constraints : sendDataJourneyConstraints)
         cell.journeyCell = self.journey
         return cell
     }
     
     func makeDeliverablesCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: deliverablesTableViewCell.cellID, for: indexPath) as! deliverablesTableViewCell
-//        cell.configureCell(Deliverables : sendDataJourneyDeliverables)
         cell.journeyCell = self.journey
         return cell
     }
@@ -192,7 +173,6 @@ extension journeyDetailViewController {
         let frame = CGRect(x: 16, y: 8, width: tableView.frame.width, height: 30)
         let label = UILabel(frame: frame)
         label.text = sectionTitles[section]
-        
         label.textColor = makeTableHeaderTintColor(at: section)
         label.font = makeHeaderViewFont()
         
@@ -217,12 +197,36 @@ extension journeyDetailViewController {
 
 }
 
+    // MARK: - Hide the statusbar
 extension journeyDetailViewController{
     override var prefersStatusBarHidden: Bool{
         return true
     }
 }
 
+    // MARK: - Set inset table view : to make it fullscreen to the edge
+extension journeyDetailViewController{
+    
+     fileprivate func setTableViewContentInsetToCustom() {
+          tableView.contentInset = UIEdgeInsets(top: -getStatusBarHeight(), left: 0, bottom: 0, right: 0)
+      }
+
+     internal func getTopInsetHeight() -> CGFloat {
+          guard let navBarHeight = getNavBarHeight() else { return 0 }
+          return getStatusBarHeight() + navBarHeight
+      }
+      
+      private func getStatusBarHeight() -> CGFloat {
+          let statusBarSize = UIApplication.shared.statusBarFrame.size
+          return Swift.min(statusBarSize.width, statusBarSize.height)
+      }
+      
+      internal func getNavBarHeight() -> CGFloat? {
+          return navigationController?.navigationBar.frame.size.height
+      }
+}
+
+    // MARK: - Dismiss Detail Journey Modal    
 extension journeyDetailViewController : ThumbnailTableViewCellDelegate{
     func closeButton() {
         dismiss(animated: true, completion: nil)

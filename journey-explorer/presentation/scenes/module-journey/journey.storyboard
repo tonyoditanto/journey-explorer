@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PrG-hT-J7W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MeT-SZ-51N">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,25 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8g8-ri-ETl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30.434782608695656" y="111.83035714285714"/>
-        </scene>
-        <!--Journey-->
-        <scene sceneID="5sf-Ff-owC">
-            <objects>
-                <navigationController id="PrG-hT-J7W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Journey" image="rectangle.grid.1x2" catalog="system" selectedImage="rectangle.grid.1x2.fill" id="8H8-yg-IIb"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9sG-PG-rTA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="MFa-7p-np6" kind="relationship" relationship="rootViewController" id="4Oq-eF-IkN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oaf-v3-NLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-948" y="112"/>
+            <point key="canvasLocation" x="879.71014492753625" y="111.83035714285714"/>
         </scene>
         <!--journeyDetail-->
         <scene sceneID="2an-Wo-tII">
@@ -104,11 +86,30 @@
                 <viewControllerPlaceholder storyboardIdentifier="journeyDetail" storyboardName="journeyDetail" id="Ej2-oC-wUd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eM0-xe-6TI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="112"/>
+            <point key="canvasLocation" x="1587.68115942029" y="111.83035714285714"/>
+        </scene>
+        <!--Journey-->
+        <scene sceneID="IVL-r0-7h8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MeT-SZ-51N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Journey" image="rectangle.grid.1x2.fill" catalog="system" selectedImage="rectangle.grid.1x2.fill" id="LbR-9K-Ofj"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0GU-be-ixI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MFa-7p-np6" kind="relationship" relationship="rootViewController" id="1TD-Dg-bfX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pYD-2e-g2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="111.83035714285714"/>
         </scene>
     </scenes>
     <resources>
-        <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
         <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
     </resources>
 </document>

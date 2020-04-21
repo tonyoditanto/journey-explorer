@@ -101,8 +101,6 @@ extension journeyDetailTableViewController {
 
     
     func setupTableView() {
-//        print(journey.journeyTitle)
-//        print(thumbnailTableViewCell.cellID)
         registerThumbnailCell()
         registerDescriptionCell()
         registerLearningGoalsCell()
@@ -112,7 +110,6 @@ extension journeyDetailTableViewController {
     
     func registerThumbnailCell() {
         let nib = UINib(nibName: thumbnailTableViewCell.cellID, bundle: Bundle.main)
-        //tableView.register(nib, forCellReuseIdentifier: thumbnailTableViewCell.cellID)
         tableView.register(nib, forCellReuseIdentifier: thumbnailTableViewCell.cellID)
 
     }
@@ -140,8 +137,6 @@ extension journeyDetailTableViewController {
     
     func makeThumbnailCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: thumbnailTableViewCell.cellID, for: indexPath) as! thumbnailTableViewCell
-        
-//        cell.configureCell(ImageView: sendDataJourneyImageview, Title: sendDataJourneyTitle, Duration: sendDataJourneyDuration, Team: sendDataJourneyTeam)
         cell.journeyCell = self.journey
         cell.delegate = self
         return cell
@@ -149,28 +144,24 @@ extension journeyDetailTableViewController {
 
     func makeDescriptionCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: descriptionTableViewCell.cellID, for: indexPath) as! descriptionTableViewCell
-//        cell.configureCell(Description: description)
         cell.journeyCell = self.journey
         return cell
     }
     
     func makeLearningGoalsCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: learningGoalsTableViewCell.cellID, for: indexPath) as! learningGoalsTableViewCell
-//        cell.configureCell(LearningGoals: sendDataJourneyLearningGoals)
         cell.journeyCell = self.journey
         return cell
     }
     
     func makeConstraintsCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: constraintsTableViewCell.cellID, for: indexPath) as! constraintsTableViewCell
-//        cell.configureCell(Constraints : sendDataJourneyConstraints)
         cell.journeyCell = self.journey
         return cell
     }
     
     func makeDeliverablesCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: deliverablesTableViewCell.cellID, for: indexPath) as! deliverablesTableViewCell
-//        cell.configureCell(Deliverables : sendDataJourneyDeliverables)
         cell.journeyCell = self.journey
         return cell
     }
@@ -187,7 +178,6 @@ extension journeyDetailTableViewController {
         let frame = CGRect(x: 16, y: 8, width: tableView.frame.width, height: 30)
         let label = UILabel(frame: frame)
         label.text = sectionTitles[section]
-        
         label.textColor = makeTableHeaderTintColor(at: section)
         label.font = makeHeaderViewFont()
         
@@ -233,7 +223,8 @@ extension journeyDetailTableViewController{
       
       internal func getNavBarHeight() -> CGFloat? {
           return navigationController?.navigationBar.frame.size.height
-      }}
+      }
+}
 
 extension journeyDetailTableViewController : ThumbnailTableViewCellDelegate{
     func closeButton() {

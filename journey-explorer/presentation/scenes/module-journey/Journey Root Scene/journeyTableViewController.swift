@@ -66,17 +66,17 @@ class journeyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedJourney = journeys[indexPath.row]
-        performSegue(withIdentifier: "showJourneyDetail", sender: indexPath)
-        //showJourneyDetailScene(at: indexPath)
+//        performSegue(withIdentifier: "showJourneyDetail", sender: indexPath)
+        showJourneyDetailScene(at: indexPath)
     }
     
     // MARK: - Sent Data to other ViewController
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showJourneyDetail" {
-            let destination = segue.destination as! journeyDetailViewController
-            destination.journey = selectedJourney
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showJourneyDetail" {
+//            let destination = segue.destination as! journeyDetailViewController
+//            destination.journey = selectedJourney
+//        }
+//    }
     
 }
 
