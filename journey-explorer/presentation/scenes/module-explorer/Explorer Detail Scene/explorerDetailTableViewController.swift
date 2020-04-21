@@ -17,7 +17,7 @@ class explorerDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 150
+        tableView.estimatedRowHeight = 80
         setupNavigationBar()
         setTableViewContentInsetToCustom()
         setupTableView()
@@ -81,6 +81,26 @@ extension explorerDetailTableViewController {
         return 1
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = makeHeaderView(at: section)
+        let headerViewLabel = makeHeaderViewLabel(at: section)
+        headerView.addSubview(headerViewLabel)
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == ExplorerDetailSection.SECTION_PHOTO {
+            return 0
+        }
+        if section == ExplorerDetailSection.SECTION_PROFILE {
+            return 0
+        }
+        if section == ExplorerDetailSection.SECTION_SIMILAR_ROLE {
+            return 0
+        }
+        return 40
+    }
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == ExplorerDetailSection.SECTION_PHOTO {
             return 414
@@ -92,7 +112,7 @@ extension explorerDetailTableViewController {
             return 313
         }
 
-        return tableView.estimatedRowHeight
+        return UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -151,6 +171,40 @@ extension explorerDetailTableViewController {
         cell.explorers = self.explorers
         //cell.delegate = self
         return cell
+    }
+    
+    func makeHeaderView(at section: Int) -> UIView {
+        let frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50)
+        let view = UIView(frame: frame)
+        view.backgroundColor = .clear
+        view.backgroundColor = makeTableHeaderViewColor(at: section)
+        return view
+    }
+    
+    func makeHeaderViewLabel(at section: Int) -> UILabel {
+        let frame = CGRect(x: 16, y: 8, width: tableView.frame.width, height: 30)
+        let label = UILabel(frame: frame)
+        label.text = sectionTitles[section]
+        label.textColor = makeTableHeaderTintColor(at: section)
+        label.font = makeHeaderViewFont()
+        
+        return label
+    }
+    
+    func makeHeaderViewFont() -> UIFont {
+        var font = UIFont.systemFont(ofSize: 22)
+        if let newDescriptor = font.fontDescriptor.withSymbolicTraits(.traitBold) {
+            font = UIFont(descriptor: newDescriptor, size: font.pointSize)
+        }
+        return font
+    }
+    
+    func makeTableHeaderViewColor(at section: Int) -> UIColor {
+        return .white
+    }
+    
+    func makeTableHeaderTintColor(at section: Int) -> UIColor {
+        return .black
     }
 }
 

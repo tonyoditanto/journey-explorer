@@ -17,25 +17,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="explorerCanHelpWith" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxd-3Y-3pR">
-                        <rect key="frame" x="16" y="36" width="382" height="20.5"/>
+                        <rect key="frame" x="16" y="8" width="382" height="72"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I CAN HELP WITH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCz-5E-bCD">
-                        <rect key="frame" x="16" y="12" width="382" height="18"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="tCz-5E-bCD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="9Nw-y3-zpc"/>
-                    <constraint firstAttribute="trailing" secondItem="tCz-5E-bCD" secondAttribute="trailing" constant="16" id="D8B-dP-st7"/>
+                    <constraint firstAttribute="bottom" secondItem="jxd-3Y-3pR" secondAttribute="bottom" constant="8" id="1g6-ZS-2Go"/>
                     <constraint firstItem="jxd-3Y-3pR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="KcZ-XK-wPP"/>
                     <constraint firstAttribute="trailing" secondItem="jxd-3Y-3pR" secondAttribute="trailing" constant="16" id="cvq-Vp-k4Q"/>
-                    <constraint firstItem="jxd-3Y-3pR" firstAttribute="top" secondItem="tCz-5E-bCD" secondAttribute="bottom" constant="6" id="scH-bb-Dpv"/>
-                    <constraint firstItem="tCz-5E-bCD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="x1t-54-AHP"/>
+                    <constraint firstItem="jxd-3Y-3pR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="wGa-1x-NXg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

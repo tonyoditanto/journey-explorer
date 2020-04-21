@@ -64,7 +64,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dMd-dj-cHd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Explorers" id="UZb-MB-hYz"/>
+                    <navigationItem key="navigationItem" title="Explorers" id="UZb-MB-hYz">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" image="line.horizontal.3.decrease.circle" catalog="system" id="BXV-pl-eDp">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="filterButtonDidTap:" destination="Mua-10-A0H" id="JUl-mB-Kjh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="jUy-Yz-Hpc" id="q0O-x0-Rc7"/>
@@ -107,6 +114,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="line.horizontal.3.decrease.circle" catalog="system" width="128" height="121"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
     </resources>
 </document>

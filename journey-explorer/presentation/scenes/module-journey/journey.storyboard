@@ -31,18 +31,18 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="journeyTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK4-2R-Bta">
-                                            <rect key="frame" x="36" y="358" width="187" height="41"/>
+                                            <rect key="frame" x="36" y="358.5" width="187" height="41"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="journeySubtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-1z-CHD">
-                                            <rect key="frame" x="36" y="400" width="120" height="21"/>
+                                            <rect key="frame" x="36" y="399.5" width="122.5" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="h6b-1z-CHD" secondAttribute="height" multiplier="40:7" id="m0a-iD-lBg"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                            <color key="textColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -52,7 +52,7 @@
                                         <constraint firstAttribute="trailing" secondItem="LvF-ye-9v7" secondAttribute="trailing" constant="17" id="Ob8-kU-tes"/>
                                         <constraint firstItem="h6b-1z-CHD" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leadingMargin" constant="16" id="eeh-iM-1Dz"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="h6b-1z-CHD" secondAttribute="bottom" constant="20" id="lV3-hi-nza"/>
-                                        <constraint firstItem="h6b-1z-CHD" firstAttribute="top" secondItem="RK4-2R-Bta" secondAttribute="bottom" constant="1" id="rkb-HO-R2v"/>
+                                        <constraint firstItem="h6b-1z-CHD" firstAttribute="top" secondItem="RK4-2R-Bta" secondAttribute="bottom" id="rkb-HO-R2v"/>
                                         <constraint firstItem="RK4-2R-Bta" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leadingMargin" constant="16" id="w4I-yE-yrH"/>
                                         <constraint firstItem="LvF-ye-9v7" firstAttribute="leading" secondItem="j3U-1U-E2G" secondAttribute="leading" constant="17" id="ySm-OK-GLR"/>
                                     </constraints>

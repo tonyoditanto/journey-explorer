@@ -43,7 +43,7 @@
                 <outlet property="explorerNameLabel" destination="dQb-cI-4V2" id="3Hz-BA-oLQ"/>
                 <outlet property="explorerSubtitle" destination="CHn-ku-xFn" id="i4C-gY-alB"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="118.86160714285714"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </tableViewCell>
     </objects>
 </document>
