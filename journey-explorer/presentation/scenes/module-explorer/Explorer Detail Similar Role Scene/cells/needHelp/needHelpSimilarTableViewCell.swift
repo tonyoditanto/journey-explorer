@@ -10,6 +10,16 @@ import UIKit
 
 class needHelpSimilarTableViewCell: UITableViewCell {
 
+    static let cellID = "needHelpSimilarTableViewCell"
+    @IBOutlet weak var explorerWantToLearnLabel: UILabel!
+    
+    var explorer: Explorer!{
+        didSet{
+            configureCell()
+        }
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +29,19 @@ class needHelpSimilarTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell() {
+        configureLabel()
+    }
+    
+    func configureLabel(){
+        var mergeWantToLearn: String = ""
+        for index in 1...explorer.explorerWantToLearn.count {
+            mergeWantToLearn += "\(explorer.explorerWantToLearn[index-1])\n"
+        }
+        self.explorerWantToLearnLabel.text = mergeWantToLearn
+
     }
     
 }

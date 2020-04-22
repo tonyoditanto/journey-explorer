@@ -27,7 +27,11 @@ class journeyDetailTableViewController: UITableViewController {
     }
     
     override var prefersStatusBarHidden: Bool{
-        return true
+        return false
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
     
     // MARK: - Dismiss Detail Journey Modal

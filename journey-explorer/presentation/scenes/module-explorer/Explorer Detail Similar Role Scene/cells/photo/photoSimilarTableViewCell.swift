@@ -10,6 +10,15 @@ import UIKit
 
 class photoSimilarTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var exploreImageView: UIImageView!
+    @IBOutlet weak var swipeDownBar: UIImageView!
+    static let cellID = "photoSimilarTableViewCell"
+    var explorer: Explorer!{
+        didSet{
+            configureCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +28,15 @@ class photoSimilarTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(){
+        configureImage()
+    }
+    
+    func configureImage(){
+        self.exploreImageView.image = UIImage(named: explorer.explorerImageName)
+        self.swipeDownBar.layer.cornerRadius = 5
     }
     
 }

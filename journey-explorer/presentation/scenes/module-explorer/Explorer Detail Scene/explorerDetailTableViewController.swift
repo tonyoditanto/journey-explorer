@@ -13,6 +13,7 @@ class explorerDetailTableViewController: UITableViewController {
     var explorers = [Explorer]()
     var explorer: Explorer!
     let sectionTitles = ["photo", "profile", "Can Help With", "Need Help With", "Similar Role"]
+    var selectedSimilarExplorer: Explorer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +68,8 @@ extension explorerDetailTableViewController {
     }
     
     func registerSimilarRoleCell() {
-        let nib = UINib(nibName: similarRoleTableViewCell.cellID, bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: similarRoleTableViewCell.cellID)
+        let nib = UINib(nibName: "similarRoleTableViewCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: "similarRoleTableViewCell")
     }
     
     // MARK: - Table view data source
@@ -166,10 +167,11 @@ extension explorerDetailTableViewController {
     }
     
     func makeSimilarRoleCell(at indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: similarRoleTableViewCell.cellID, for: indexPath) as! similarRoleTableViewCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: similarRoleTableViewCell.cellID, for: indexPath) as! similarRoleTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "similarRoleTableViewCell", for: indexPath) as! similarRoleTableViewCell
         cell.explorer = self.explorer
         cell.explorers = self.explorers
-        //cell.delegate = self
+        cell.delegate = self
         return cell
     }
     
@@ -229,6 +231,44 @@ extension explorerDetailTableViewController{
       }
     
     override var prefersStatusBarHidden: Bool{
-        return true
+        return false
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }
+
+// MARK: - Routing
+
+extension explorerDetailTableViewController {
+    
+    func showSimilarExplorerDetailScene(didSelect indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "explorerSimilarDetail", bundle: nil)
+        let destination = storyboard.instantiateViewController(identifier: "explorerSimilarDetailTableViewController") as! explorerSimilarDetailTableViewController
+        destination.explorer = selectedSimilarExplorer
+        destination.modalPresentationStyle = .automatic
+        self.present(destination, animated: true, completion: nil)
+        //print(journeys[indexPath.row].journeyTitle)
+    }
+}
+
+
+// MARK: - HighlightsFeaturedCellDelegate
+
+extension explorerDetailTableViewController: similarRoleTableViewCellDelegate {
+    func getSimilarExplorer(for similarExplorer: Explorer!) {
+        selectedSimilarExplorer = similarExplorer
+    }
+    
+    func similarRoleTableViewCell(_ similarRoleTableViewCell: similarRoleTableViewCell, collectionView: UICollectionView, didSelect at: IndexPath) {
+        showSimilarExplorerDetailScene(didSelect: at)
+
+    }
+    
+
+    
+}
+
+
+

@@ -9,7 +9,17 @@
 import UIKit
 
 class profileSimilarTableViewCell: UITableViewCell {
-
+    
+    static let cellID = "profileSimilarTableViewCell"
+    @IBOutlet weak var explorerNameLabel: UILabel!
+    @IBOutlet weak var explorerSubtitle: UILabel!
+    
+    var explorer: Explorer!{
+        didSet{
+            configureCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +31,12 @@ class profileSimilarTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(){
+        configureLabel()
+    }
+    
+    func configureLabel(){
+        self.explorerNameLabel.text = explorer.explorerName
+        self.explorerSubtitle.text = "\(explorer.explorerType.rawValue) - \(explorer.explorerRole.rawValue)"
+    }
 }

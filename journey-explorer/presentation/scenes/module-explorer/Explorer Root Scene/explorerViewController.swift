@@ -347,13 +347,15 @@ extension explorerViewController: UICollectionViewDataSource, UICollectionViewDe
 
 }
 
+// MARK: - Get searchText from searchBar
 extension explorerViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         // Get search text
         let searchText: String = searchController.searchBar.text?.lowercased() ?? ""
         self.searchText = searchText
-        //print(searchText)
         collectionView.reloadData()
     }
 }
+
+
