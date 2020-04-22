@@ -174,8 +174,328 @@ class ExplorerRepository {
                                   explorerImageName: "Faris_MO",
                                   explorerWantToLearn: [""],
                                   explorerCanHelpWith: ["Unity 3D Programmer"]))
+
+        explorers.append(Explorer(explorerID: 17,
+                                  explorerName: "Ferdinan Linardi",
+                                  explorerType: .junior,
+                                  explorerShift: .morning,
+                                  explorerRole: .design,
+                                  explorerImageName: "Ferdinan_MO",
+                                  explorerWantToLearn: ["Swift",
+                                                        "UI/UX Design",
+                                                        "Copywriting",
+                                                        "Public Speaking",
+                                                        "English Practice"],
+                                  explorerCanHelpWith: ["Ilustration",
+                                                        "Graphic Design",
+                                                        "Fashion Styling"]))
         
+        explorers.append(Explorer(explorerID: 18,
+                                  explorerName: "Geraldine Janice Wibisono",
+                                  explorerType: .junior,
+                                  explorerShift: .morning,
+                                  explorerRole: .design,
+                                  explorerImageName: "Janice_MO",
+                                  explorerWantToLearn: ["Swift",
+                                                        "UI/UX Design",
+                                                        "Copywriting",
+                                                        "Public Speaking",
+                                                        "English Practice"],
+                                  explorerCanHelpWith: ["Ilustration",
+                                                        "Graphic Design",
+                                                        "Fashion Styling"]))
+
+    explorers.append(Explorer(explorerID: 19,
+                                  explorerName: "Hana Christina Rondoh",
+                                  explorerType: .junior,
+                                  explorerShift: .morning,
+                                  explorerRole: .design,
+                                  explorerImageName: "Hana_MO",
+                                  explorerWantToLearn: ["XCode, Swift, UI/UX Design, English Practice, English Public Speaking, English copywriting"],
+                                  explorerCanHelpWith: ["Fashion design, Graphic design, Fashion business and styling"]))
         
+        explorers.append(Explorer(explorerID: 20,
+                                      explorerName: "Henry Christanto Sutjiono",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .design,
+                                      explorerImageName: "Henry_MO",
+                                      explorerWantToLearn: ["XBasic Coding for XCode, designing prototype with Sketch"],
+                                      explorerCanHelpWith: ["Photography, Copywriting & Advertising"]))
+
+        explorers.append(Explorer(explorerID: 21,
+                                      explorerName: "Ibrahim Yunus Muhammad Fiqhan",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Fiqhan_MO",
+                                      explorerWantToLearn: ["English, Graphic Design, Custom Component in Swift (Star Rating)"],
+                                      explorerCanHelpWith: ["Basic programing, Object Oriented Programing (OOP), Software Design Pattern"]))
+
+        explorers.append(Explorer(explorerID: 22,
+                                      explorerName: "James Tirto",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .other,
+                                      explorerImageName: "James_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+
+        explorers.append(Explorer(explorerID: 23,
+                                      explorerName: "Janice Budihartono",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "J'Ice_MO",
+                                      explorerWantToLearn: ["Auto layout, Intermediate Swift Code (maybe), Design"],
+                                      explorerCanHelpWith: ["- Code","- English"]))
+
+        explorers.append(Explorer(explorerID: 24,
+                                      explorerName: "Jeffrey Phinardi Kosasih",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Jep_MO",
+                                      explorerWantToLearn: ["Public Speaking, Xcode (Constraint, Chat Feature, and Verification Code)"],
+                                      explorerCanHelpWith: ["Youtube content, Pr, Ph, Ai, Basic coding, "]))
+
+
+        explorers.append(Explorer(explorerID: 25,
+                                      explorerName: "Jeffry Sandy Purnomo",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Jeffry_MO",
+                                      explorerWantToLearn: ["Swift UI"],
+                                      explorerCanHelpWith: ["Basic Code, Basic Sketch"]))
+
+        explorers.append(Explorer(explorerID: 26,
+                                      explorerName: "Jesslyn Faustina",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .design,
+                                      explorerImageName: "Jesslyn_MO",
+                                      explorerWantToLearn: ["Intermediate coding"],
+                                      explorerCanHelpWith: ["Graphic Design"]))
+        
+        explorers.append(Explorer(explorerID: 27,
+                                      explorerName: "Josephine Sugiharto",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .design,
+                                      explorerImageName: "Jose_MO",
+                                      explorerWantToLearn: ["Basic Coding"],
+                                      explorerCanHelpWith: ["Branding, Graphic Design"]))
+        
+        explorers.append(Explorer(explorerID: 28,
+                                      explorerName: "Karina Enny Agustina",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .other,
+                                      explorerImageName: "Karina_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 29,
+                                      explorerName: "Leonora Jeanifer",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .other,
+                                      explorerImageName: "Jean_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 30,
+                                      explorerName: "Lois Pangestu",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Lois_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 31,
+                                      explorerName: "M. Rizky Hidayat",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Rizky_MO",
+                                      explorerWantToLearn: ["- English speak",
+                                                            "- Swift code style",
+                                                            "- Self management"],
+                                      explorerCanHelpWith: ["Basic Code, SysAdmin"]))
+        
+        explorers.append(Explorer(explorerID: 32,
+                                      explorerName: "Martin Ivo Hardinoto",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Martin_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: ["- Basic swift",
+                                                            "- Ask me everything about covid-19"]))
+
+        explorers.append(Explorer(explorerID: 33,
+                                      explorerName: "Michael Randicha Gunawan Santoso",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Michael_MO",
+                                      explorerWantToLearn: ["Someone with Intermediate / Advanced understanding on TableViewController, TableViewCell, InputAccessoryView, TableViewCell's item's constraint & Protocol"],
+                                      explorerCanHelpWith: ["Coder : Basic Swift, Intermediate Javascript (Angular & Ionic), Intermediate Laravel, Interested in Flutter"]))
+        
+        explorers.append(Explorer(explorerID: 34,
+                                      explorerName: "Moh. Zinnur Atthufail Addausi",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "A'il_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 35,
+                                      explorerName: "Najibullah Ulul Albab",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Ulul_MO",
+                                      explorerWantToLearn: ["Swift Intermediate, UX Designer"],
+                                      explorerCanHelpWith: ["BCode, UI/UX Pattern"]))
+        
+        explorers.append(Explorer(explorerID: 36,
+                                      explorerName: "Natanael Geraldo Santoso",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Natanael_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 37,
+                                      explorerName: "Nicholas Ang",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Nicholas_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: ["Videography, Photography, Game Development (Unity), Animation and VFX, Basic Code"]))
+        
+        explorers.append(Explorer(explorerID: 38,
+                                      explorerName: "Nur Afni Zuhrotul Laili",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Afni_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: ["- basic swift",
+                                                            "- passing data between viewcontroller",
+                                                            "- set onboarding screen"]))
+        
+        explorers.append(Explorer(explorerID: 39,
+                                      explorerName: "Oktavia Citra Resmi Rachmawati",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Citra_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 40,
+                                      explorerName: "Rachel Audrey Effendi",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .design,
+                                      explorerImageName: "Rachel_MO",
+                                      explorerWantToLearn: ["Basic coding"],
+                                      explorerCanHelpWith: ["Graphic Design, Branding"]))
+        
+        explorers.append(Explorer(explorerID: 41,
+                                      explorerName: "Rizal Hidayat",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Rizal_MO",
+                                      explorerWantToLearn: ["English"],
+                                      explorerCanHelpWith: ["Basic code / basic swift"]))
+        
+        explorers.append(Explorer(explorerID: 42,
+                                      explorerName: "Siti Istiany Tribunda",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .design,
+                                      explorerImageName: "Isti_MO",
+                                      explorerWantToLearn: ["-English speaking",
+                                                            "-Public speaking",
+                                                            "-Team work",
+                                                            "- Coding, Swift, UI&UX Design."],
+                                      explorerCanHelpWith: ["Graphic Design :",
+                                                            "Branding",
+                                                            "Layout",
+                                                            "Social Media Enthusiast :p"]))
+        
+        explorers.append(Explorer(explorerID: 43,
+                                      explorerName: "Steven Wijaya",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "SW_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: ["Basic Code, Basic Swift, iOS dev, a bit MacOS dev, Laravel, Backend, etc."]))
+        
+        explorers.append(Explorer(explorerID: 44,
+                                      explorerName: "Taufiq Ramadhany",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Taufiq_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: ["Basic swift"]))
+        
+        explorers.append(Explorer(explorerID: 45,
+                                      explorerName: "Tony Varian Yoditanto",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Tony_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 46,
+                                      explorerName: "Wahyu Kharisma Mujiono",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Wahyujus_MO",
+                                      explorerWantToLearn: [""],
+                                      explorerCanHelpWith: [""]))
+        
+        explorers.append(Explorer(explorerID: 47,
+                                      explorerName: "Wahyu Saputra",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Wahyu_MO",
+                                      explorerWantToLearn: ["Photoeditor, English Speaking"],
+                                      explorerCanHelpWith: ["Basic Coding"]))
+        
+        explorers.append(Explorer(explorerID: 48,
+                                      explorerName: "Winata Arafat Fal Aham",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .tech,
+                                      explorerImageName: "Badai_MO",
+                                      explorerWantToLearn: ["UI/UX Design, Swift, English Speaking"],
+                                      explorerCanHelpWith: ["Basic programing, Object Oriented Programing (OOP), Software Design Pattern"]))
+        
+        explorers.append(Explorer(explorerID: 49,
+                                      explorerName: "Yonatan Niko Sucahyo",
+                                      explorerType: .junior,
+                                      explorerShift: .morning,
+                                      explorerRole: .other,
+                                      explorerImageName: "Niko_MO",
+                                      explorerWantToLearn: ["basic coding, graphic Design"],
+                                      explorerCanHelpWith: ["Business Management"]))
+
 //      ---- Senior ----
         explorers.append(Explorer(explorerID: 50,
                                   explorerName: "Ari Kurniawan",
